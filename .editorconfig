@@ -1,0 +1,38 @@
+# Maintain consistent coding style
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+max_line_length = 120
+quote_type = double
+
+[*.{commitlintrc,eslint*,js,jsx,json,md,mjs,ts,tsx}]
+indent_size = 2
+
+[*.{html,yml,yaml}]
+indent_size = 2
+max_line_length = off
+
+[*.{ps1,psm1,psd1}]
+max_line_length = 115
+
+[*.py]
+profile = black
+
+[*.{sh,bash,zsh}]
+indent_size = 2
+max_line_length = 79
+
+[{*.svg,.env*}]
+insert_final_newline = false
+max_line_length = off
+
+[{Makefile,.gitattributes,.gitconfig,.gitcredentials,.gitmessage,.gitmodules}]
+indent_size = 8
+indent_style = tab
