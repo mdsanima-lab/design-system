@@ -9,13 +9,13 @@ indent_size = 4
 indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
-max_line_length = 120
 quote_type = double
 
-[*.{commitlintrc,eslint*,js,jsx,json,md,mjs,ts,tsx}]
+[*.{commitlintrc,eslint*,html,css,js,jsx,json,md,mjs,ts,tsx,versionrc,todo}]
 indent_size = 2
+max_line_length = 120
 
-[*.{html,yml,yaml}]
+[*.{yml,yaml}]
 indent_size = 2
 max_line_length = off
 
@@ -25,13 +25,20 @@ max_line_length = 115
 [*.py]
 profile = black
 
-[*.{sh,bash,zsh}]
+[*.{sh,bash,zsh*,vim}]
 indent_size = 2
-max_line_length = 79
+max_line_length = 80
 
 [{*.svg,.env*}]
 insert_final_newline = false
 max_line_length = off
+
+[{.clang-format,.clang-tidy}]
+indent_size = 2
+
+[{CMakeLists.txt,*.{cmake,c,h,cc,hh,cpp,hpp,cxx,hxx}}]
+indent_size = 2
+max_line_length = 80
 
 [{Makefile,.gitattributes,.gitconfig,.gitcredentials,.gitmessage,.gitmodules}]
 indent_size = 8
