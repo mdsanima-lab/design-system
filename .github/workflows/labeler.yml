@@ -1,4 +1,4 @@
-name: Sync Labels
+name: Syncing Repository Labels
 
 on:
   workflow_dispatch:
@@ -18,7 +18,7 @@ jobs:
     permissions: write-all
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
